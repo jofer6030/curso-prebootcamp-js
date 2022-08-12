@@ -52,6 +52,3 @@ numeros.forEach(() => {
   numeros[numeros.indexOf(numeroMayor)] = 0;
 })
 console.log(arrOrdenado)
-
-
-
