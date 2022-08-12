@@ -53,3 +53,50 @@ function countPositivesSumNegatives(input) {
 // console.log(countPositivesSumNegatives([1,-2]))
 // console.log(a([1,-2]))
 // console.log(countPositivesSumNegatives())
+
+function arrAdder(arr) {
+  const arrString = [];
+  arr.forEach((_, index) => {
+    for(let i = 0; i< arr.length ; i++) {
+      if(arr[i][index]) {
+        arrString.push(arr[i][index]);
+      }
+    }
+    arrString.push(" ")
+  })
+  return arrString.join("").trim();
+}
+
+
+console.log(
+  arrAdder([
+      ['J','L','L','M'],
+      ['u','i','i','a'],
+      ['s','v','f','n'],
+      ['t','e','e','']
+  ])
+);
+
+console.log(
+  arrAdder([ 
+    [ 'T', 'M', 'i', 't', 'p', 'o', 't', 'c' ],
+    [ 'h', 'i', 's', 'h', 'o', 'f', 'h', 'e' ],
+    [ 'e', 't', '', 'e', 'w', '', 'e', 'l' ],
+    [ '', 'o', '', '', 'e', '', '', 'l' ],
+    [ '', 'c', '', '', 'r', '', '', '' ],
+    [ '', 'h', '', '', 'h', '', '', '' ],
+    [ '', 'o', '', '', 'o', '', '', '' ],
+    [ '', 'n', '', '', 'u', '', '', '' ],
+    [ '', 'd', '', '', 's', '', '', '' ],
+    [ '', 'r', '', '', 'e', '', '', '' ],
+    [ '', 'i', '', '', '', '', '', '' ],
+    [ '', 'a', '', '', '', '', '', '' ] ])
+);
+
+console.log(
+  arrAdder([ 
+    [ 'H', 's', 'J' ],
+    [ 'o', 'o', 'o'  ],
+    [ 'l', 'y', 's' ],
+    [ 'a', '', 'é'],])
+);
