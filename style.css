@@ -1,4 +1,11 @@
-.desdejs{
-  font-size: 50px;
-  color:red;
+#cuadro {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: lightblue;
+  transition: all 1s ease;
+}
+
+#cuadro:hover {
+  cursor: pointer;
 }
