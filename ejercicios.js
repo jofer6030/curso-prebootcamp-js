@@ -100,3 +100,40 @@ console.log(
     [ 'l', 'y', 's' ],
     [ 'a', '', 'é'],])
 );
+
+function findNextPower(val, pow_) {
+  const result =  Math.floor(Math.pow(val, 1/pow_) + 1)**pow_;
+  return result === val ? Math.floor(Math.pow(val, 1/pow_) + 2)**pow_ : result;
+}
+
+
+console.log(findNextPower(27,3));
+console.log(findNextPower(4782969,7));
+
+// const sortByArea = (array) => array.map((element,indice) => typeof element === "object" 
+//     ?{area:element[0] * element[1],index:indice}
+//     :{area:3.14 * (element**2),index:indice}
+//   ).sort((a,b) => a.area - b.area).map(element => array[element.index])
+function sortByArea(array) {
+  const arrayNew = [];
+  array.forEach((element,indice) => {
+    if(typeof element === "object") {
+      arrayNew.push({
+        area:element[0] * element[1],
+        index:indice
+      })
+    }else {
+      arrayNew.push({
+        area:3.14 * (element**2),
+        index:indice
+      })
+    }
+  })
+  const arrayFinal = arrayNew.sort((a,b) => a.area - b.area);
+  const arrayOrdenado =  arrayFinal.map(element => {
+    return array[element.index]
+  })
+
+  return arrayOrdenado
+}
+// console.log(sortByArea([[4.23, 6.43], 1.23, 3.444, [1.342, 3.212]]));
